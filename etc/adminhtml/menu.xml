@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Risecommerce_Banner::elements" title="Risecommerce Banners" module="Risecommerce_Banner" resource="Risecommerce_Banner::manage_banners" sortOrder="50"/>
+        <add id="Risecommerce_Banner::banner" title="Manage Banners" module="Risecommerce_Banner" resource="Risecommerce_Banner::manage_banners" parent="Risecommerce_Banner::elements" sortOrder="1" action="banner/banner/" />
+        <add id="Risecommerce_Banner::configuration" title="Configuration" module="Risecommerce_Banner" resource="Risecommerce_Banner::config_banner" parent="Risecommerce_Banner::elements" sortOrder="2" action="admin/system_config/edit/section/risecommerce_banner/"/>
+    </menu>
+</config>
