@@ -109,7 +109,9 @@ class Save extends \Risecommerce\Banner\Controller\Adminhtml\Banner
                 ->setData('banner_title', '')
                 ->setData('label_button_text', '')
                 ->setData('call_to_action', '')
-                ->setData('banner_description', '');
+                ->setData('banner_description', '')
+                ->setData('banner_title_color', '')
+                ->setData('banner_description_color', '');
         }
 
         if ($data['banner_type'] == "Video") {

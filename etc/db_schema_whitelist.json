@@ -1,0 +1,54 @@
+{
+    "risecommerce_banner": {
+        "column": {
+            "banner_id": true,
+            "banner_title": true,
+            "banner_title_color": true,
+            "banner_description": true,
+            "banner_description_color": true,
+            "banner_type": true,
+            "banner_image": true,
+            "banner_video": true,
+            "banner_video_thumb_image": true,
+            "banner_youtube": true,
+            "banner_video_autoplay": true,
+            "banner_vimeo": true,
+            "start_date": true,
+            "end_date": true,
+            "label_button_text": true,
+            "call_to_action": true,
+            "position": true,
+            "is_active": true,
+            "creation_time": true,
+            "update_time": true
+        },
+        "index": {
+            "RISECOMMERCE_BANNER_BANNER_TITLE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "risecommerce_banner_store": {
+        "column": {
+            "banner_id": true,
+            "store_id": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_F00E2B52AF755D4AF872CFAFB1128F72": true,
+            "RISECOMMERCE_BANNER_STORE_STORE_ID_STORE_STORE_ID": true
+        }
+    },
+    "risecommerce_banner_customer_group": {
+        "column": {
+            "banner_id": true,
+            "customer_group_id": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_1533D26EB9DC90DB14EAF603F6DA6D9C": true,
+            "FK_5903CEE21EE048CC92FB685C5743D20F": true
+        }
+    }
+}

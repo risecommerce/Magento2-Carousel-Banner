@@ -10,6 +10,7 @@ define([
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false,
+                adaptiveHeight: true,
                 autoplay: parseInt(config.autoplay),
                 autoplaySpeed: parseInt(config.autoplay_speed),
                 pauseOnHover:false,

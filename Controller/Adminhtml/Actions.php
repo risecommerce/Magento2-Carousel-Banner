@@ -284,8 +284,7 @@ abstract class Actions extends \Magento\Backend\App\Action
         if ($values) {
             $model->addData($values);
         }
-         /*  $bannerCollection=$this->bannerCollectionFactory->create()->addFieldToFilter('banner_id', array('eq' => $model->getId()));
-           $bannerCollection->_afterload();*/
+       
         $this->_view->renderLayout();
     }
 

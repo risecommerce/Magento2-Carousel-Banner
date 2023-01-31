@@ -18,25 +18,39 @@
             </group>
             <group id="advance" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Advance Configuration</label>
-                <field id="auto_rotation" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="btntextcolor" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color</label>
+                    <frontend_model>Risecommerce\Banner\Block\Color</frontend_model>
+                    <comment>Select Colour  from colour picker.</comment>
+                </field>
+                <field id="hoverbtntextcolor" translate="label" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hover Button Color</label>
+                    <frontend_model>Risecommerce\Banner\Block\Color</frontend_model>
+                    <comment>Select Colour  from colour picker.</comment>
+                </field>
+                  <field id="btncolor" translate="label" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <frontend_model>Risecommerce\Banner\Block\Color</frontend_model>
+                    <comment>Select Colour  from colour picker.</comment>
+                </field>
+                <field id="left_padding" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">  
+                    <label>Left Side Padding</label>
+                    <comment>In format e.g. 20px else  leave it blank for full width </comment>
+                </field>
+                <field id="right_padding" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Right Side Padding</label>
+                   <comment>In format e.g. 20px else  leave it blank for full width</comment>
+                </field>
+                <field id="auto_rotation" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Auto Rotation</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="auto_rotation_speed" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="auto_rotation_speed" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
                     <depends>
                         <field id="auto_rotation">1</field>
                     </depends>
                     <label>Auto Rotation Speed (ms)</label>
                     <validate>required-entry validate-number</validate>
-                </field>
-                <field id="left_padding" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
-                    
-                    <label>Left Side Padding</label>
-                    <comment>In format e.g. 20px else  leave it blank if do not need of padding </comment>
-                </field>
-                <field id="right_padding" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Right Side Padding</label>
-                   <comment>In format e.g. 20px else  leave it blank if do not need of padding</comment>
                 </field>
             </group>
         </section>

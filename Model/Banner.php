@@ -111,6 +111,16 @@ class Banner extends AbstractModel implements BannerInterface, IdentityInterface
     {
         return $this->getData(self::BANNER_TITLE);
     }
+    /**
+     * Get banner title color
+     *
+     * @return string|null
+     */
+
+    public function getBannerTitleColor()
+    {
+        return $this->getData(self::BANNER_TITLE_COLOR);
+    }
 
     /**
      * Get banner description
@@ -120,6 +130,16 @@ class Banner extends AbstractModel implements BannerInterface, IdentityInterface
     public function getBannerDescription()
     {
         return $this->getData(self::BANNER_DESCRIPTION);
+    }
+
+    /**
+     * Get banner description color
+     *
+     * @return string|null
+     */
+    public function getBannerDescriptionColor()
+    {
+        return $this->getData(self::BANNER_DESCRIPTION_COLOR);
     }
 
     /**
@@ -311,6 +331,18 @@ class Banner extends AbstractModel implements BannerInterface, IdentityInterface
         return $this->setData(self::BANNER_TITLE, $bannerTitle);
     }
 
+     /**
+     * Set banner title color
+     *
+     * @param string $bannerTitleColor bannerTitleColor
+     *
+     * @return \Risecommerce\Banner\Api\Data\BannerInterface
+     */
+    public function setBannerTitleColor($bannerTitleColor)
+    {
+        return $this->setData(self::BANNER_TITLE_COLOR, $bannerTitleColor);
+    }
+
     /**
      * Set banner description
      *
@@ -321,6 +353,18 @@ class Banner extends AbstractModel implements BannerInterface, IdentityInterface
     public function setBannerDescription($bannerDescription)
     {
         return $this->setData(self::BANNER_DESCRIPTION, $bannerDescription);
+    }
+
+    /**
+     * Set banner description color
+     *
+     * @param string $bannerDescriptionColor bannerDescriptionColor
+     *
+     * @return \Risecommerce\Banner\Api\Data\BannerInterface
+     */
+    public function setBannerDescriptionColor($bannerDescriptionColor)
+    {
+        return $this->setData(self::BANNER_DESCRIPTION_COLOR, $bannerDescriptionColor);
     }
 
     /**

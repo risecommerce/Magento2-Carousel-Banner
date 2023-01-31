@@ -8,6 +8,9 @@
             <advance>
                 <auto_rotation>0</auto_rotation>
                 <auto_rotation_speed>5000</auto_rotation_speed>
+                <btncolor>#000000</btncolor>
+                <btntextcolor>#ffffff</btntextcolor>
+                <hoverbtntextcolor>#2B649E</hoverbtntextcolor>
             </advance>
         </risecommerce_banner>
     </default>

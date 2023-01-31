@@ -147,12 +147,16 @@ class Main extends Generic implements TabInterface
                     $(".field-banner_video_thumb_image").hide();
                     $(".field-banner_video_autoplay").hide();
                     $(".field-banner_description").hide();
+                    $(".field-banner_description_color").hide();
+                    $(".field-banner_title_color").hide();
 
                     $(function() {
 
                         if ($("#banner_type").val() == "Image") {
                             $(".field-banner_image").show();
                             $(".field-banner_description").show();
+                            $(".field-banner_description_color").show();
+                            $(".field-banner_title_color").show();
                             $(".field-banner_video").hide();
                             $(".field-banner_youtube").hide();
                             $(".field-banner_vimeo").hide();
@@ -167,6 +171,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_youtube").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
                         if ($("#banner_type").val() == "Youtube") {
                             $(".field-banner_youtube").show();
@@ -176,6 +182,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_video").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
                          if ($("#banner_type").val() == "Vimeo") {
                             $(".field-banner_youtube").hide();
@@ -185,6 +193,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").show();
                             $(".field-banner_video").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
                     });
 
@@ -198,6 +208,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_video_thumb_image").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
 
                         if($("#banner_type").attr("value") == "Image"){
@@ -208,6 +220,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_video_thumb_image").hide();
                             $(".field-banner_description").show();
+                            $(".field-banner_description_color").show();
+                            $(".field-banner_title_color").show();
                         }
 
                         if($("#banner_type").attr("value") == "Video"){
@@ -218,6 +232,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_youtube").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
 
                         if($("#banner_type").attr("value") == "Youtube"){
@@ -228,6 +244,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").hide();
                             $(".field-banner_video").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
                         if ($("#banner_type").attr("value")  == "Vimeo") {
                             $(".field-banner_youtube").hide();
@@ -237,6 +255,8 @@ class Main extends Generic implements TabInterface
                             $(".field-banner_vimeo").show();
                             $(".field-banner_video").hide();
                             $(".field-banner_description").hide();
+                            $(".field-banner_description_color").hide();
+                            $(".field-banner_title_color").hide();
                         }
                     });
                 });
@@ -429,6 +449,21 @@ class Main extends Generic implements TabInterface
             ]
         );
 
+        $bannerTitleColor = $fieldset->addField(
+            'banner_title_color',
+            'text',
+            [
+                'name' => 'post[banner_title_color]',
+                'label' => __('Title Color'),
+                'title' => __('Title Color'),
+                'placeholder' => '#000000',
+                'class'  => 'jscolor {hash:true,refine:false}',
+                'required' => false,
+                'disabled' => $isElementDisabled
+            ]
+        );
+
+
         $fieldset->addField(
             'store_id',
             'multiselect',
@@ -478,13 +513,27 @@ class Main extends Generic implements TabInterface
 
         $contentField = $fieldset->addField(
             'banner_description',
-            'editor',
+            'textarea',
             [
                 'name' => 'post[banner_description]',
                 'label' => __('Description'),
                 'title' => __('Description'),
                 'class' => ' validate-length maximum-length-335',
                 'config' => $wysiwygConfig,
+                'disabled' => $isElementDisabled,
+                'validate-length' => true,
+            ]
+        );
+
+        $contentFieldColor = $fieldset->addField(
+            'banner_description_color',
+            'text',
+            [
+                'name' => 'post[banner_description_color]',
+                'label' => __('Description Color'),
+                'title' => __('Description Color'),
+                'placeholder' => '#000000',
+                'class'  => 'jscolor {hash:true,refine:false}',
                 'disabled' => $isElementDisabled,
                 'validate-length' => true,
             ]
@@ -576,7 +625,11 @@ class Main extends Generic implements TabInterface
                 ->addFieldMap($bannerImage->getHtmlId(), $bannerImage->getName())
                 ->addFieldMap($bannerVideo->getHtmlId(), $bannerVideo->getName())
                 ->addFieldMap($bannerTitle->getHtmlId(), $bannerTitle->getName())
+                ->addFieldMap($bannerTitle->getHtmlId(), $bannerTitle->getName())
+                ->addFieldMap($bannerTitleColor->getHtmlId(), $bannerTitleColor->getName())
                 ->addFieldMap($bannerLabelText->getHtmlId(), $bannerLabelText->getName())
+                ->addFieldMap($contentField->getHtmlId(), $contentField->getName())
+                ->addFieldMap($contentFieldColor->getHtmlId(), $contentFieldColor->getName())
                 ->addFieldMap($bannerCallToAction->getHtmlId(), $bannerCallToAction->getName())
                 ->addFieldMap($bannerYoutube->getHtmlId(), $bannerYoutube->getName())
                 ->addFieldMap($bannerVimeo->getHtmlId(), $bannerVimeo->getName())
@@ -585,7 +638,10 @@ class Main extends Generic implements TabInterface
                 ->addFieldDependence($bannerYoutube->getName(), $bannerType->getName(), 'Youtube')
                 ->addFieldDependence($bannerVimeo->getName(), $bannerType->getName(), 'Vimeo')
                 ->addFieldDependence($bannerTitle->getName(), $bannerType->getName(), 'Image')
+                ->addFieldDependence($bannerTitleColor->getName(), $bannerType->getName(), 'Image')
                 ->addFieldDependence($bannerLabelText->getName(), $bannerType->getName(), 'Image')
+                ->addFieldDependence($contentField->getName(), $bannerType->getName(), 'Image')
+                ->addFieldDependence($contentFieldColor->getName(), $bannerType->getName(), 'Image')
                 ->addFieldDependence($bannerCallToAction->getName(), $bannerType->getName(), 'Image')
         );
 

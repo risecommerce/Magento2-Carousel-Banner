@@ -5,7 +5,9 @@
         <column xsi:type="int" name="banner_id" padding="10" unsigned="true" nullable="false" identity="true"
                 comment="Banner Id"/>
         <column xsi:type="varchar" name="banner_title" nullable="false" length="255" comment="Banner Title"/>
+        <column xsi:type="varchar" name="banner_title_color" nullable="false" length="255" comment="Banner Title Color"/>
         <column xsi:type="mediumtext" name="banner_description" nullable="true" comment="Banner Description"/>
+        <column xsi:type="varchar" name="banner_description_color" nullable="true" comment="Banner Description Color"/>
         <column xsi:type="varchar" name="banner_type" nullable="false" length="255" default="Image"
                 comment="Banner Type"/>
         <column xsi:type="varchar" name="banner_image" nullable="true" length="255" comment="Banner Image"/>

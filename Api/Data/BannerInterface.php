@@ -21,6 +21,8 @@ interface BannerInterface
     public const BANNER_ID             = 'banner_id';
     public const BANNER_TITLE          = 'banner_title';
     public const BANNER_DESCRIPTION    = 'banner_description';
+    public const BANNER_TITLE_COLOR          = 'banner_title_color';
+    public const BANNER_DESCRIPTION_COLOR    = 'banner_description_color';
     public const BANNER_TYPE           = 'banner_type';
     public const BANNER_IMAGE          = 'banner_image';
     public const BANNER_VIDEO          = 'banner_video';
@@ -50,6 +52,20 @@ interface BannerInterface
      * @return string
      */
     public function getBannerTitle();
+
+     /**
+     * Get banner title color
+     * 
+     * @return string
+     */
+    public function getBannerTitleColor();
+
+    /**
+     * Get banner description  color
+     *
+     * @return string
+     */
+    public function getBannerDescriptionColor();
 
     /**
      * Get banner description
@@ -179,6 +195,24 @@ interface BannerInterface
      * @return \Risecommerce\Banner\Api\Data\BannerInterface
      */
     public function setBannerTitle($bannerTitle);
+
+    /**
+     * Set Banner title color
+     *
+     * @param string $bannerTitleColor bannerTitleColor
+     *
+     * @return \Risecommerce\Banner\Api\Data\BannerInterface
+     */
+    public function setBannerTitleColor($bannerTitleColor);
+
+    /**
+     * Set bannerdescriptionColor
+     *
+     * @param string $bannerDescriptionColor bannerDescriptionColor
+     *
+     * @return \Risecommerce\Banner\Api\Data\BannerInterface
+     */
+    public function setBannerDescriptionColor($bannerDescriptionColor);
 
     /**
      * Set bannerdescription
