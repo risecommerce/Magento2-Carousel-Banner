@@ -18,12 +18,13 @@
     "minimum-stability": "dev", 
   "keywords": [
     "magento 2",
-    "magento 2bbanner",
+    "magento 2 banner",
     "magentobbanner",
     "risecommerce",
     "banner",
     "banner settings",
-    "owl carousel banner"
+    "owl carousel banner",
+    "slick carousel banner"
   ],
     "require": {
         "php": "~7.0.13|~7.1.0|~7.2.0|~7.3.0|~7.4.0|^8.1"
