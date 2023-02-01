@@ -281,7 +281,7 @@ class Main extends Generic implements TabInterface
                 'name' => 'post[banner_image]',
                 'required' => true,
                 'value' => $model->getData('banner_image'),
-                'note' => __('Note : Please upload image 1920 x 650 (width x height) size with jpg, jpeg, gif, png format'),
+                'note' => __('Note : Please upload image 1170 x 550 (width x height) size with jpg, jpeg, gif, png format'),
             ]
         )->setAfterElementHtml(
             '
