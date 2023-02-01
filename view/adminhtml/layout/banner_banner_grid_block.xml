@@ -57,6 +57,30 @@
                             <argument name="column_css_class" xsi:type="string">col-first-name</argument>
                         </arguments>
                     </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="banner_title_color">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Title Color</argument>
+                            <argument name="index" xsi:type="string">banner_title_color</argument>
+                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
+                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
+                        </arguments>
+                    </block>
+                     <block class="Magento\Backend\Block\Widget\Grid\Column" as="banner_description">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Discription</argument>
+                            <argument name="index" xsi:type="string">banner_description</argument>
+                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
+                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
+                        </arguments>
+                    </block>
+                     <block class="Magento\Backend\Block\Widget\Grid\Column" as="banner_description_color">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Discription Color</argument>
+                            <argument name="index" xsi:type="string">banner_description_color</argument>
+                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
+                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
+                        </arguments>
+                    </block>
                     <block class="Magento\Backend\Block\Widget\Grid\Column" as="banner_type">
                     <arguments>
                             <argument name="header" xsi:type="string" translate="true">Type</argument>
@@ -92,24 +116,7 @@
                             <argument name="column_css_class" xsi:type="string">col-status</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="creation_time">
-                        <arguments>
-                            <argument name="header" xsi:type="string" translate="true">Created</argument>
-                            <argument name="index" xsi:type="string">creation_time</argument>
-                            <argument name="type" xsi:type="string">datetime</argument>
-                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
-                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
-                        </arguments>
-                    </block>
-                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="update_time">
-                        <arguments>
-                            <argument name="header" xsi:type="string" translate="true">Modified</argument>
-                            <argument name="index" xsi:type="string">update_time</argument>
-                            <argument name="type" xsi:type="string">datetime</argument>
-                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
-                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
-                        </arguments>
-                    </block>
+
                     <block class="Magento\Backend\Block\Widget\Grid\Column" as="start_date">
                         <arguments>
                             <argument name="header" xsi:type="string" translate="true">Start Date</argument>
@@ -123,6 +130,24 @@
                         <arguments>
                             <argument name="header" xsi:type="string" translate="true">End Date</argument>
                             <argument name="index" xsi:type="string">end_date</argument>
+                            <argument name="type" xsi:type="string">datetime</argument>
+                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
+                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="creation_time">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Created</argument>
+                            <argument name="index" xsi:type="string">creation_time</argument>
+                            <argument name="type" xsi:type="string">datetime</argument>
+                            <argument name="header_css_class" xsi:type="string">col-first-name</argument>
+                            <argument name="column_css_class" xsi:type="string">col-first-name</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="update_time">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Updated</argument>
+                            <argument name="index" xsi:type="string">update_time</argument>
                             <argument name="type" xsi:type="string">datetime</argument>
                             <argument name="header_css_class" xsi:type="string">col-first-name</argument>
                             <argument name="column_css_class" xsi:type="string">col-first-name</argument>
