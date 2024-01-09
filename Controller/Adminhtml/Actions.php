@@ -77,6 +77,23 @@ abstract class Actions extends \Magento\Backend\App\Action
      * @var \Magento\Framework\Registry
      */
     protected $coreRegistry = null;
+   /**
+     * @var \Risecommerce\Banner\Model\BannerFactory
+     */
+
+     private $bannerFactory;
+
+    /**
+     * @var \Risecommerce\Banner\Model\ResourceModel\Banner
+     */
+
+     private $bannerResource;
+
+    /**
+     * @var \Risecommerce\Banner\Model\ResourceModel\Banner\CollectionFactory
+     */
+
+     private $bannerCollectionFactory;
 
     /**
      * Actions constructor.
@@ -85,6 +102,7 @@ abstract class Actions extends \Magento\Backend\App\Action
      * @param \Risecommerce\Banner\Model\BannerFactory        $bannerFactory  bannerFactory
      * @param \Risecommerce\Banner\Model\ResourceModel\Banner $bannerResource bannerResource
      */
+    
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Risecommerce\Banner\Model\BannerFactory $bannerFactory,
