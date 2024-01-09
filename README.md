@@ -20,8 +20,7 @@ Method II)
 
 Using Composer
 
-composer require risecommerce/magento-2-banner-extension:1.0.1
-
+composer require risecommerce/magento-2-banner-extension
 #Enable Extension:
 - php bin/magento module:enable Risecommerce_Banner
 - php bin/magento setup:upgrade
